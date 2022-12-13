@@ -79,10 +79,10 @@ To secure connections to MongoDBCommunity resources with TLS using `cert-manager
 
    Where `mongodb-replica-set` is the name of your MongoDBCommunity resource
 
-   - Then, use `mongosh` to connect over TLS:
+   - Then, use `mongo` to connect over TLS:
 
    ```
-   mongosh --tls --tlsCAFile /var/lib/tls/ca/ca.crt --tlsCertificateKeyFile \
+   mongo --tls --tlsCAFile /var/lib/tls/ca/*.pem --tlsCertificateKeyFile \
    /var/lib/tls/server/*.pem \ 
    --host <mongodb-replica-set>.<mongodb-replica-set>-svc.<namespace>.svc.cluster.local
    ```
